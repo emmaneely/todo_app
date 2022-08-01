@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To Do App</title>
+  <link rel="stylesheet" href="main.css" />
+</head>
+
+<body>
+  <main class="app">
+    <h1>To Do App</h1>
+
+    <section class="greeting">
+      <h2 class="title">
+        Good morning, <input type="text" id="name" placeholder="Name here" />!
+      </h2>
+    </section>
+
+    <section class="create-todo">
+      <h3>NEW TO DO</h3>
+      <form id="new-todo-form">
+        <h4>What needs to get done?</h4>
+        <input type="text" name="content" id="content" placeholder="Call mom" />
+        <h4>Choose a category:</h4>
+        <div class="categories">
+          <label>
+            <input type="radio" name="category" id="personal" value="personal" />
+            <span class="bubble personal"></span>
+            <p>Personal</p>
+          </label>
+          <label>
+            <input type="radio" name="category" id="work" value="work" />
+            <span class="bubble work"></span>
+            <p>Work</p>
+          </label>
+        </div>
+        <input type="submit" value="Add to list" />
+      </form>
+    </section>
+
+    <section class="todo-list">
+      <h3>TO DO LIST</h3>
+      <div class="list" id="todo-list">
+        <div class="todo-item">
+          <label>
+            <input type="checkbox" />
+            <span class="bubble personal"></span>
+          </label>
+          <div class="todo-content">
+            <input type="text" value="Call mom" readonly />
+          </div>
+          <div class="actions">
+            <button class="edit">Edit</button>
+            <button class="delete">Delete</button>
+          </div>
+        </div>
+        <div class="todo-item">
+          <label>
+            <input type="checkbox" />
+            <span class="bubble work"></span>
+          </label>
+          <div class="todo-content">
+            <input type="text" value="Answer emails" readonly />
+          </div>
+          <div class="actions">
+            <button class="edit">Edit</button>
+            <button class="delete">Delete</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="main.js"></script>
+</body>
+
+</html>
